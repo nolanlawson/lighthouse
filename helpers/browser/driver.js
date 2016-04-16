@@ -151,7 +151,7 @@ class ChromeProtocol {
 
   gotoURL(url, waitForLoaded) {
     return this.sendCommand('Page.enable').then(_ => {
-      return this.sendCommand('Page.getNavigationHistory')
+      return this.sendCommand('Page.getNavigationHistory');
     }).then(navHistory => {
       const currentURL = navHistory.entries[navHistory.currentIndex].url;
 
